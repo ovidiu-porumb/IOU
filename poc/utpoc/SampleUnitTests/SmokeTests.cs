@@ -13,7 +13,7 @@ namespace SampleUnitTests
         [Test]
         public void SmokeTest()
         {
-            Assert.Fail("Smoketest successfully failed");
+            Assert.Pass("Smoketest successfully passed");
         }
 
     }
