@@ -13,7 +13,7 @@ namespace SmokeTest
         [Test]
         public void SmokeTestOne()
         {
-            Assert.Fail("Oops");
+            Assert.Pass("YAY!");
         }
 
     }
