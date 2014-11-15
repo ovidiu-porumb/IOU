@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Net.Http;
 using Microsoft.Owin.Hosting;
+using WebService;
 
 namespace SelfHost
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            const string baseAddress = "http://localhost:19000/";
+            const string serviceAddress = "http://localhost:19000/";
 
-            using (WebApp.Start<Startup>(url: baseAddress))
+            using (WebApp.Start<Startup>(url: serviceAddress))
             {
                 HttpClient client = new HttpClient();
-                HttpResponseMessage response = client.GetAsync(baseAddress + "api/persons").Result;
+                HttpResponseMessage response = client.GetAsync(serviceAddress + "api/persons").Result;
 
                 Console.WriteLine(response);
                 Console.WriteLine(response.Content.ReadAsStringAsync().Result);

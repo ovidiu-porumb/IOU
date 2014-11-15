@@ -1,30 +1,31 @@
 ﻿using System.Data.Entity;
+using Model;
 
-namespace SelfHost
+namespace Dal
 {
     internal class DbInitializer : DropCreateDatabaseAlways<PersonContext>
     {
         protected override void Seed(PersonContext context)
         {
-            context.Persons.Add(new Person()
+            context.Persons.Add(new Person
             {
                 FirstName = "Alexandra",
                 LastName = "Popescu"
             });
 
-            context.Persons.Add(new Person()
+            context.Persons.Add(new Person
             {
                 FirstName = "Andrei",
                 LastName = "Albu"
             });
             
-            context.Persons.Add(new Person()
+            context.Persons.Add(new Person
             {
                 FirstName = "Simona",
                 LastName = "Tecsa"
             });
             
-            context.Persons.Add(new Person()
+            context.Persons.Add(new Person
             {
                 FirstName = "Ovidiu",
                 LastName = "Porumb"

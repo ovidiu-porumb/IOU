@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Dal;
+using Model;
 
-namespace SelfHost
+namespace WebService
 {
     public class PersonsController : ApiController
     {

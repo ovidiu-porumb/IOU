@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using Owin;
 
-namespace SelfHost
+namespace WebService
 {
     public class Startup
     {
